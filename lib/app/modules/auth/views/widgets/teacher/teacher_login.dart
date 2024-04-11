@@ -41,7 +41,10 @@ class TeacherLogin extends GetView<AuthController> {
                   : ElevatedButton(
                       style: primaryButtonStyle,
                       onPressed: controller.teacherLogin,
-                      child: Text("تسجيل الدخول".tr),
+                      child: Text(
+                        "تسجيل الدخول".tr,
+                        style: const TextStyle(color: Colors.white),
+                      ),
                     ),
             ),
             TextButton(

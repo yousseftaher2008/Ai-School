@@ -48,6 +48,7 @@ class StudentAuth extends GetView<AuthController> {
                                   ? "التالي".tr
                                   : "تسجيل حساب جديد".tr
                               : "تسجيل الدخول".tr,
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ),
               ],

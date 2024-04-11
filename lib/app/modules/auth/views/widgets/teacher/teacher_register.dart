@@ -49,6 +49,7 @@ class TeacherRegister extends GetView<RegisterController> {
                               controller.isFirstRegisterStep.value
                                   ? "التالي".tr
                                   : "تسجيل حساب جديد".tr,
+                              style: const TextStyle(color: Colors.white),
                             ),
                           ),
                   ),

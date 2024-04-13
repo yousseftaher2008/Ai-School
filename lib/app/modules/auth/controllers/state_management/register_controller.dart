@@ -94,7 +94,6 @@ class RegisterController extends AuthController {
     //? to reload the subject ui
     isLoadingSubject.value = true;
     isLoadingSubject.value = false;
-
     final url = ('${baseUrl}Grade/GetGradesByStageId/$stageId');
     Map<String, String> headers = {
       "Authorization": "Bearer ${authController.user.token}",
@@ -155,7 +154,6 @@ class RegisterController extends AuthController {
         return;
       }
 
-      print(mainController.user.token);
       Map<String, String> headers = {
         "Authorization": "Bearer ${mainController.user.token}",
         "Content-Type": "multipart/form-data",
@@ -172,12 +170,10 @@ class RegisterController extends AuthController {
         'StageId': stageId ?? "",
         'GradeId': gradeId,
       });
-      const url = ('${baseUrl}Student/StudentRegistration');
+      final url = ('${baseUrl}Student/StudentRegistration');
       late final dio.Response response;
       response = await dio.Dio()
           .post(url, data: formData, options: dio.Options(headers: headers));
-      print(response.statusCode);
-      print(response.data);
 
       if (response.statusCode == 200) {
         final Student student = Student.fromRegisterJson(response.data);
@@ -199,7 +195,6 @@ class RegisterController extends AuthController {
       }
     } catch (e) {
       isRegistering.value = false;
-      print(e);
       Get.offAll(() => const ErrorScreen());
     }
   }
@@ -226,7 +221,7 @@ class RegisterController extends AuthController {
         'password': passwordController.text,
         'subjects': selectedSubjectsJson,
       });
-      const String url = '${baseUrl}Teacher/RegisterVisitingTeacher';
+      final String url = '${baseUrl}Teacher/RegisterVisitingTeacher';
       final response = await post(Uri.parse(url), body: body, headers: headers);
       final Map<String, dynamic> data = json.decode(response.body);
       if (response.statusCode == 200) {

@@ -18,23 +18,18 @@ import 'register_controller.dart';
 import "reset_password_controller.dart";
 
 class AuthController extends MainController {
-  //phone properties
   final GlobalKey<FormFieldState> phoneKey = GlobalKey<FormFieldState>();
   final TextEditingController phoneController = TextEditingController();
   String phoneNumber = "";
   String? errorText;
-  // teacher properties
   final TextEditingController teacherEmailController = TextEditingController();
   final TextEditingController teacherPassController = TextEditingController();
   final GlobalKey<FormState> teacherFromKey = GlobalKey<FormState>();
-  //controllers
   late final RegisterController registerController;
   final MainController mainController = Get.find<MainController>();
-  //country properties
   List<Country> countries = [];
   Country? selectedCountry;
   final RxString selectedCountryCode = "اختر دولتك".tr.obs;
-  //boolean values
   final RxBool isGettingCountries = false.obs;
   final RxBool isTeacher = false.obs;
   final RxBool isChangingPass = false.obs;
@@ -54,7 +49,7 @@ class AuthController extends MainController {
       return;
     }
     isGettingCountries.value = true;
-    const url = ("${baseUrl}Countries/GetAllCountries");
+    final url = ("${baseUrl}Countries/GetAllCountries");
     try {
       final response = await dio.Dio().get(url);
       if ((response.statusCode ?? 200) < 400) {
@@ -79,7 +74,7 @@ class AuthController extends MainController {
       }
       phoneKey.currentState!.save();
       try {
-        const url = ('${baseUrl}Student/Login');
+        final url = ('${baseUrl}Student/Login');
         final body = json.encode({
           "mobile": phoneNumber,
           "deviceToken": deviceToken,
@@ -88,11 +83,8 @@ class AuthController extends MainController {
           "Content-Type": "application/json",
           "accept": "*/*",
         };
-        print(user.token);
         final response =
             await http.post(Uri.parse(url), body: body, headers: head);
-        print(response.statusCode);
-        print(response.body);
         if ((response.statusCode) >= 400) {
           isLogging.value = false;
           Get.offAll(() => const ErrorScreen());
@@ -121,7 +113,6 @@ class AuthController extends MainController {
         }
       } catch (e) {
         isLogging.value = false;
-        print(e);
         Get.offAll(const ErrorScreen());
       }
     }

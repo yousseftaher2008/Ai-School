@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart';
 
@@ -75,7 +76,7 @@ class StudentHomeController extends MainController {
         libraries.add(Library.fromJson(lib));
       }
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
     }
   }
 
@@ -95,7 +96,7 @@ class StudentHomeController extends MainController {
         subjects.add(Subject.fromJson(sub));
       }
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
     }
   }
 }

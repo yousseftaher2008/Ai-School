@@ -66,17 +66,6 @@ class SearchedSubjectGridItem extends StatelessWidget {
                     subject.name,
                   ),
                 ),
-                // DefaultTextStyle(
-                //   style: TextStyle(
-                //     color: infoColor.withOpacity(0.75),
-                //     fontWeight: FontWeight.bold,
-                //   ),
-                //   softWrap: false,
-                //   overflow: TextOverflow.ellipsis,
-                //   child: const Text(
-                //     "pages: 3",
-                //   ),
-                // ),
               ],
             ),
           ),

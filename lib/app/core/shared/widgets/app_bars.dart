@@ -22,11 +22,3 @@ Widget firstAppBar({required Widget child}) => DecoratedBox(
       ),
       child: child,
     );
-    //     gradient: LinearGradient(
-    //       begin: const Alignment(1, 0),
-    //       end: const Alignment(-1.15, -1.986),
-    //       // colors: appBarBackgroundColors,
-    //       stops: const <double>[0, 0.225, 0.393, 0.547, 0.785, 0.875, 1],
-    //     ),
-    //   ),
-    // );

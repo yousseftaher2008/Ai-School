@@ -20,7 +20,6 @@ class HelpButton extends StatelessWidget {
     return ElevatedButton.icon(
       style: ElevatedButton.styleFrom(
           backgroundColor: primaryColorLight,
-          // backgroundColor: Colors.transparent,
           side: BorderSide(
             color: Colors.white,
             width: 2.w,

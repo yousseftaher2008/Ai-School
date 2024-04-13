@@ -53,7 +53,6 @@ class NoInternetScreen extends StatelessWidget {
             stepWidget("او أعد الاتصال بشبكة Wifi او بيانات الهاتف او".tr),
           ],
         ),
-        // ),
       ),
     );
   }

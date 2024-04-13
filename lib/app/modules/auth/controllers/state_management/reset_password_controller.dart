@@ -20,7 +20,7 @@ class ResetPasswordController extends GetxController {
   String? expectedCode;
 
   Future<bool> requestCode(String email) async {
-    const String url = '${baseUrl}Teacher/ForgetUserPassword';
+    final String url = '${baseUrl}Teacher/ForgetUserPassword';
     final body = {
       "email": email.trim(),
     };
@@ -52,7 +52,7 @@ class ResetPasswordController extends GetxController {
     if (!(teacherResetPassFromKey.currentState?.validate() ?? false)) {
       return;
     }
-    const String url = '${baseUrl}Teacher/ResetUserPassword';
+    final String url = '${baseUrl}Teacher/ResetUserPassword';
     final body = {
       "userId": userId,
       "token": resetCodeController.text,
@@ -64,7 +64,7 @@ class ResetPasswordController extends GetxController {
     if (response.statusCode == 200) {
       Get.find<AuthController>().isChangingPass.value = false;
     } else {
-      // Fluttertoast.showToast(msg: 'يرجى المحاولة لاحقا');
+      //? Fluttertoast.showToast(msg: 'يرجى المحاولة لاحقا');
     }
   }
 }

@@ -42,7 +42,7 @@ class StudentSearchController extends StudentHomeController {
         searchedSubjectsLength.value = searchedSubjects.length;
       }
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
     }
   }
 

@@ -1,16 +1,20 @@
-# my_egabat
+# Ai-School
 
-A new Flutter project.
+Ai-School is a Flutter app developed for Algorithm for Integrated Solutions. This app is a rebuild of the existing app with improvements in its structure, user interface, API integration, and functionality enhancements.
 
-## Getting Started
+## Links
+- **Google Play Store:** [Ai-School on Google Play Store](https://play.google.com/store/apps/details?id=com.algorithmsintegratedsolution.egabat1)
+- **LinkedIn Page:** [Algorithm for Integrated Solution](https://www.linkedin.com/company/algorithm-for-integrated-solution/)
 
-This project is a starting point for a Flutter application.
+## About
+This app was developed during training from 6/2023 to 12/2023. It focuses on algorithms for integrated solutions and aims to provide a seamless user experience.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+To run the app code, make sure to add a `.env` file in the app root directory. In this file, define the following variables:
+- `BASE_URL`: Set this variable to the API link.
+- `IMAGE_URL`: Set this variable to the image API link.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+If you don't have the API link, you can view the app in action on [YouTube](https://youtu.be/PAxrAVX2LC8).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Acknowledgements
+We would like to thank all contributors and individuals who have helped in the development of Ai-School.

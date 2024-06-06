@@ -33,7 +33,6 @@ migrate_working_dir/
 /build/
 
 #secret
-lib/app/core/constants/base_url.dart
 .env
 
 # Symbolication related

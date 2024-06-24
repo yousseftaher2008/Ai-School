@@ -16,7 +16,7 @@ To run the app code, make sure to add a `.env` file in the app root directory. I
 - `BASE_URL`: Set this variable to the API link.
 - `IMAGE_URL`: Set this variable to the image API link.
 
-If you don't have the API link, you can view the app in action on [YouTube](https://youtu.be/PAxrAVX2LC8).
+If you don't have the API link, you can view the app in action on [YouTube](https://youtu.be/jE91RrB1JRg).
 
 ## Acknowledgements
 We would like to thank all contributors and individuals who have helped in the development of Ai-School.
